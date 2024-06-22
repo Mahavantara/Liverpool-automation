@@ -1,0 +1,4 @@
+com/liverpool/pageObjects/UserInformation.class
+com/liverpool/pageObjects/LoginPage.class
+com/liverpool/pageObjects/HomePage.class
+com/liverpool/pageObjects/CreateAccountPage.class
