@@ -1,8 +1,23 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 123.492 s <<< FAILURE! - in TestSuite
-CreateAccountPageTest.tearDown  Time elapsed: 20.333 s  <<< FAILURE!
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 106.199 s <<< FAILURE! - in TestSuite
+CreateAccountPageTest.testAccountCreation  Time elapsed: 17.934 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='m-title']' (tried for 15 second(s) with 500 milliseconds interval)
+	at CreateAccountPageTest.testAccountCreation(CreateAccountPageTest.java:26)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='m-title']"}
+  (Session info: chrome=126.0.6478.63)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.1', java.version: '20.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [006e6745f451de81bd5b42390c4ca151, findElement {value=//div[@class='m-title'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.63, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: /var/folders/z7/vrgxfvjn3h5...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59789}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59789/devtoo..., se:cdpVersion: 126.0.6478.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 006e6745f451de81bd5b42390c4ca151
+	at CreateAccountPageTest.testAccountCreation(CreateAccountPageTest.java:26)
+
+CreateAccountPageTest.tearDown  Time elapsed: 32.97 s  <<< FAILURE!
 org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.id: promotions__banner' (tried for 15 second(s) with 500 milliseconds interval)
 	at CreateAccountPageTest.tearDown(CreateAccountPageTest.java:33)
 Caused by: org.openqa.selenium.NoSuchElementException: 
@@ -12,8 +27,23 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.1', java.version: '20.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e4a72b0e675824a36fce4b73c070f67e, findElement {value=promotions__banner, using=id}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.63, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: /var/folders/z7/vrgxfvjn3h5...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57318}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57318/devtoo..., se:cdpVersion: 126.0.6478.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e4a72b0e675824a36fce4b73c070f67e
+Command: [006e6745f451de81bd5b42390c4ca151, findElement {value=promotions__banner, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.63, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: /var/folders/z7/vrgxfvjn3h5...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59789}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59789/devtoo..., se:cdpVersion: 126.0.6478.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 006e6745f451de81bd5b42390c4ca151
 	at CreateAccountPageTest.tearDown(CreateAccountPageTest.java:33)
+
+LoginPageTest.testLoginValidCredentials  Time elapsed: 15.473 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //span[@class='a-header__topLink' and text()='Iniciar sesión']' (tried for 15 second(s) with 500 milliseconds interval)
+	at LoginPageTest.testLoginValidCredentials(LoginPageTest.java:26)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='a-header__topLink' and text()='Iniciar sesión']"}
+  (Session info: chrome=126.0.6478.63)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.1', java.version: '20.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bbe121637761112cdbf937c0a1d77f79, findElement {value=//span[@class='a-header__topLink' and text()='Iniciar sesión'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.63, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: /var/folders/z7/vrgxfvjn3h5...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60170}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:60170/devtoo..., se:cdpVersion: 126.0.6478.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bbe121637761112cdbf937c0a1d77f79
+	at LoginPageTest.testLoginValidCredentials(LoginPageTest.java:26)
 

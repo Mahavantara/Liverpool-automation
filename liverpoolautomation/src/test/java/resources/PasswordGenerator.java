@@ -19,28 +19,49 @@ public class PasswordGenerator {
             throw new IllegalArgumentException("Length must be at least 4");
             
         }
-        String upperCase = RandomStringUtils.random(1, UPPERCASE);
-        String lowerCase = RandomStringUtils.random(1, LOWERCASE);
-        String digit = RandomStringUtils.random(1, DIGITS);
-        String specialChar = RandomStringUtils.random(1, SPECIAL_CHARACTERS);
+        String upperCasePass = RandomStringUtils.random(1, UPPERCASE);
+        String lowerCasePass = RandomStringUtils.random(1, LOWERCASE);
+        String digitPass = RandomStringUtils.random(1, DIGITS);
+        String specialCharPass = RandomStringUtils.random(1, SPECIAL_CHARACTERS);
 
-        String remainingChars = RandomStringUtils.random(length - 4, 
+        String remainingCharsPass = RandomStringUtils.random(length - 4, 
         ALL_CHARACTERS);
 
-        String combinedChars = upperCase + lowerCase + digit + specialChar + remainingChars;
+        String combinedCharsPass = upperCasePass + lowerCasePass + digitPass + specialCharPass + remainingCharsPass;
         List<Character> characters = new ArrayList<>();
-        for (char c : combinedChars.toCharArray()) {
+        for (char c : combinedCharsPass.toCharArray()) {
             characters.add(c);
         }
         Collections.shuffle(characters);
 
-        // Build the final shuffled string
         StringBuilder shuffledPassword = new StringBuilder();
         for (char c : characters) {
             shuffledPassword.append(c);
         }
 
         return shuffledPassword.toString();
+    }
+
+    public static String generateUserRandom() {
+        String lowerCaseUser = RandomStringUtils.random(6, LOWERCASE);
+        String digitUser = RandomStringUtils.random(4, DIGITS);
+        String domainUser = "@gmail.com";
+
+        String combinedCharUser = lowerCaseUser + digitUser;
+        List<Character> charactersUser = new ArrayList<>();
+        for(char c : combinedCharUser.toCharArray()) {
+            charactersUser.add(c);
+        }
+
+        Collections.shuffle(charactersUser);
+        
+        StringBuilder shuffledUsernName = new StringBuilder();
+        for(char c : charactersUser){
+            shuffledUsernName.append(c);
+        }
+        String userName = shuffledUsernName.toString() + domainUser;
+
+        return userName;
     }
 
 }

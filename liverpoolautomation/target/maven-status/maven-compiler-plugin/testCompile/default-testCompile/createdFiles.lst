@@ -1,3 +1,4 @@
+resources/PasswordGenerator.class
 CreateAccountPageTest.class
 CheckoutPageTest.class
 LoginPageTest.class
