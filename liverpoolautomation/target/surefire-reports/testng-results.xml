@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-11T16:26:57 CST" name="Suite1" finished-at="2024-06-11T16:27:18 CST" duration-ms="20677">
+  <suite started-at="2024-06-21T22:34:34 CST" name="Suite1" finished-at="2024-06-21T22:36:37 CST" duration-ms="123264">
     <groups>
     </groups>
-    <test started-at="2024-06-11T16:26:57 CST" name="Test" finished-at="2024-06-11T16:27:18 CST" duration-ms="20677">
-      <class name="CreateAccountTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:CreateAccountTest@4b5a5ed1]" started-at="2024-06-11T16:26:57 CST" name="setUp" finished-at="2024-06-11T16:27:07 CST" duration-ms="10089" status="PASS">
+    <test started-at="2024-06-21T22:34:34 CST" name="Test" finished-at="2024-06-21T22:36:37 CST" duration-ms="123264">
+      <class name="CreateAccountPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:CreateAccountPageTest@794cb805]" started-at="2024-06-21T22:34:34 CST" name="setUp" finished-at="2024-06-21T22:34:47 CST" duration-ms="13070" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAccountCreation()[pri:0, instance:CreateAccountTest@4b5a5ed1]" started-at="2024-06-11T16:27:07 CST" name="testAccountCreation" finished-at="2024-06-11T16:27:18 CST" duration-ms="10455" status="FAIL">
+        <test-method signature="testAccountCreation()[pri:0, instance:CreateAccountPageTest@794cb805]" started-at="2024-06-21T22:34:47 CST" name="testAccountCreation" finished-at="2024-06-21T22:34:52 CST" duration-ms="5300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAccountCreation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CreateAccountPageTest@794cb805]" started-at="2024-06-21T22:34:52 CST" name="tearDown" finished-at="2024-06-21T22:35:07 CST" duration-ms="15026" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[contains(text(), 'Crear cuenta')]' (tried for 10 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.id: promotions__banner' (tried for 15 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[contains(text(), 'Crear cuenta')]' (tried for 10 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.id: promotions__banner' (tried for 15 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at CreateAccountTest.testAccountCreation(CreateAccountTest.java:59)
+at CreateAccountPageTest.tearDown(CreateAccountPageTest.java:33)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:238)
+at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:223)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:137)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:739)
 at org.testng.TestRunner.run(TestRunner.java:614)
@@ -51,15 +54,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter
 at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(), 'Crear cuenta')]"}
-  (Session info: chrome=125.0.6422.142)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#promotions__banner"}
+  (Session info: chrome=126.0.6478.63)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.1', java.version: '20.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f0b83ce9bc4f63eb96ab731be0a24cd2, findElement {value=//a[contains(text(), 'Crear cuenta')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /var/folders/z7/vrgxfvjn3h5...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56698}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56698/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f0b83ce9bc4f63eb96ab731be0a24cd2
+Command: [e4a72b0e675824a36fce4b73c070f67e, findElement {value=promotions__banner, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.63, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: /var/folders/z7/vrgxfvjn3h5...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57318}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57318/devtoo..., se:cdpVersion: 126.0.6478.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e4a72b0e675824a36fce4b73c070f67e
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -83,18 +86,38 @@ at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions
 at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
 at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 31 more
+... 30 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAccountCreation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:CreateAccountTest@4b5a5ed1]" started-at="2024-06-11T16:27:18 CST" name="tearDown" finished-at="2024-06-11T16:27:18 CST" duration-ms="110" status="PASS">
+        </test-method> <!-- tearDown -->
+      </class> <!-- CreateAccountPageTest -->
+      <class name="LoginPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:LoginPageTest@48aaecc3]" started-at="2024-06-21T22:36:04 CST" name="setUp" finished-at="2024-06-21T22:36:15 CST" duration-ms="11423" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginValidCredentials()[pri:0, instance:LoginPageTest@48aaecc3]" started-at="2024-06-21T22:36:15 CST" name="testLoginValidCredentials" finished-at="2024-06-21T22:36:37 CST" duration-ms="22117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginValidCredentials -->
+      </class> <!-- LoginPageTest -->
+      <class name="CheckoutPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:CheckoutPageTest@60d8c9b7]" started-at="2024-06-21T22:35:07 CST" name="setUp" finished-at="2024-06-21T22:35:16 CST" duration-ms="8665" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testBuyingArticles()[pri:0, instance:CheckoutPageTest@60d8c9b7]" started-at="2024-06-21T22:35:16 CST" name="testBuyingArticles" finished-at="2024-06-21T22:36:03 CST" duration-ms="47441" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuyingArticles -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CheckoutPageTest@60d8c9b7]" started-at="2024-06-21T22:36:03 CST" name="tearDown" finished-at="2024-06-21T22:36:04 CST" duration-ms="182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- CreateAccountTest -->
+      </class> <!-- CheckoutPageTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite1 -->
 </testng-results>

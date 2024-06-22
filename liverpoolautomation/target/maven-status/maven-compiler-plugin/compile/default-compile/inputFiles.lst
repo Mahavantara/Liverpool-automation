@@ -1,4 +1,5 @@
 /Users/marcogarcia/Liverpool automation/liverpoolautomation/src/main/java/com/liverpool/pageObjects/CreateAccountPage.java
 /Users/marcogarcia/Liverpool automation/liverpoolautomation/src/main/java/com/liverpool/pageObjects/HomePage.java
+/Users/marcogarcia/Liverpool automation/liverpoolautomation/src/main/java/com/liverpool/pageObjects/CheckOutPage.java
 /Users/marcogarcia/Liverpool automation/liverpoolautomation/src/main/java/com/liverpool/pageObjects/LoginPage.java
-/Users/marcogarcia/Liverpool automation/liverpoolautomation/src/main/java/com/liverpool/pageObjects/UserInformation.java
+/Users/marcogarcia/Liverpool automation/liverpoolautomation/src/main/java/com/liverpool/pageObjects/UserInformationPage.java

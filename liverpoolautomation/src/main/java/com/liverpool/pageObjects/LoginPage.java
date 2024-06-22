@@ -24,6 +24,9 @@ public class LoginPage {
 
     @FindBy(name="action")
     private WebElement loginButton;
+
+    @FindBy(id="error-element-password")
+    private WebElement errorPassMess;
     
     public WebElement createAccountLink() {
         return this.createAccountLink;
@@ -38,5 +41,9 @@ public class LoginPage {
 
     public WebElement loginButton() {
         return this.loginButton;
+    }
+
+    public WebElement errorPassMess(){
+        return this.errorPassMess;
     }
 }

@@ -47,4 +47,6 @@ public class TestResource {
         waitLonger.until(ExpectedConditions.visibilityOf(homePage.homeLogoBanner()));
         
     }
+
+    
 }

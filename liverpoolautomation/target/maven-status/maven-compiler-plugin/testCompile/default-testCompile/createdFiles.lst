@@ -1,1 +1,4 @@
-CreateAccountTest.class
+CreateAccountPageTest.class
+CheckoutPageTest.class
+LoginPageTest.class
+resources/TestResource.class

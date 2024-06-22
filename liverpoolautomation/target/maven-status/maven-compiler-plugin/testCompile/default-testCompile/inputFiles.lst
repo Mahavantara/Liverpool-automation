@@ -1,1 +1,5 @@
-/Users/marcogarcia/Liverpool automation/liverpoolautomation/src/test/java/CreateAccountTest.java
+/Users/marcogarcia/Liverpool automation/liverpoolautomation/src/test/java/CreateAccountPageTest.java
+/Users/marcogarcia/Liverpool automation/liverpoolautomation/src/test/java/resources/PasswordGenerator.java
+/Users/marcogarcia/Liverpool automation/liverpoolautomation/src/test/java/LoginPageTest.java
+/Users/marcogarcia/Liverpool automation/liverpoolautomation/src/test/java/CheckoutPageTest.java
+/Users/marcogarcia/Liverpool automation/liverpoolautomation/src/test/java/resources/TestResource.java
