@@ -54,6 +54,12 @@ public class CreateAccountPage {
     @FindBy(css="li[data-error-code='password-policy-numbers']")
     private WebElement errorMessageNumber;
 
+    @FindBy(id="error-element-email")
+    private WebElement errorMessageEmail;
+
+    @FindBy(xpath="//span[contains(text(), 'Su contraseña debe contener:')]")
+    private WebElement passContainsMessage;
+
     public WebElement emailTextBox(){
         return this.emailTextBox;
     }
@@ -86,7 +92,13 @@ public class CreateAccountPage {
         return this.errorMessageNumber;
     }
 
+    public WebElement errorMessageEmail(){
+        return this.errorMessageEmail;
+    }
 
+    public WebElement passContainsMessage(){
+        return this.passContainsMessage;
+    }
 }
 
 

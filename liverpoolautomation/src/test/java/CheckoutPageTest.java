@@ -1,8 +1,8 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import resources.TestResource;
@@ -13,7 +13,7 @@ public class CheckoutPageTest {
     private String[] testProducts = {"Videojuego", "Pelota", "Paleta"};
     private TestResource testResource;
 
-    @BeforeClass
+    @BeforeMethod
     public void setUp(){
         testResource = new TestResource();
         testResource.driver.get(testResource.urlHomePage);
@@ -28,7 +28,7 @@ public class CheckoutPageTest {
         } 
     }
     
-    @AfterClass
+    @AfterMethod
     public void tearDown(){
         testResource.driver.quit();
     }

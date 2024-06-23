@@ -14,7 +14,7 @@ public class UserInformationPage {
     }
 
     @FindBy(xpath="//div[@class='m-title']")
-    private WebElement userInformationTitle;
+    public WebElement userInformationTitle;
 
     public WebElement userInformationTitle() {
         return this.userInformationTitle;
