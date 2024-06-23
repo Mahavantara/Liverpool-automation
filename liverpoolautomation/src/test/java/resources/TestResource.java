@@ -23,6 +23,10 @@ public class TestResource {
     public WebDriverWait wait;
     public WebDriverWait waitLonger;
     public UserInformationPage userInformationPage;
+    public static final String emailCorrect = "marcoalfredo.gg@gmail.com";
+    public static final String passwordCorrect = "Automation1";
+    public String randomPass = PasswordGenerator.generateRandomPassword(10);
+    public String invalidEmail = PasswordGenerator.generateUserRandom();
 
     //setup login page
     public TestResource(){

@@ -1,19 +1,21 @@
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import resources.PasswordGenerator;
 import resources.TestResource;
 
 public class LoginPageTest {
+    //String testResource.invalidPass = PasswordGenerator.generateRandomPassword(10);
+    //String invalidEmail = PasswordGenerator.generateUserRandom();
+    WebElement waitErrorPass;
     private TestResource testResource;
     String validEmail = "marcoalfredo.gg+1@gmail.com";
     String validPass = "Automation1";
 
-    @BeforeClass
+    @BeforeMethod
     public void setUp() {
         testResource = new TestResource();
         testResource.driver.get(testResource.urlHomePage);
@@ -34,21 +36,17 @@ public class LoginPageTest {
     }
 
     @Test
-    public void testLoginInvalidPassword() {
-        String invalidPass = PasswordGenerator.generateRandomPassword(10);
-        String invalidEmail = PasswordGenerator.generateUserRandom();
-        WebElement waitErrorPass;
-
+    public void testLoginInvalidCredentials() {
         //Invalid password 
         testResource.wait.until(ExpectedConditions.elementToBeClickable(testResource.homePage.loginButton())).click();
         testResource.wait.until(ExpectedConditions.visibilityOf(testResource.loginPage.emailTextBox())).sendKeys(validEmail);
-        testResource.wait.until(ExpectedConditions.visibilityOf(testResource.loginPage.passwordTextBox())).sendKeys(invalidPass);
+        testResource.wait.until(ExpectedConditions.visibilityOf(testResource.loginPage.passwordTextBox())).sendKeys(testResource.randomPass);
         testResource.wait.until(ExpectedConditions.elementToBeClickable(testResource.loginPage.loginButton())).click();
         
         waitErrorPass = testResource.waitLonger.until(ExpectedConditions.visibilityOf(testResource.loginPage.errorPassMess()));
         Assert.assertTrue(waitErrorPass.isDisplayed(), "The home logo banner is not enabled.");
         //Invalid email 
-        testResource.wait.until(ExpectedConditions.visibilityOf(testResource.loginPage.emailTextBox())).sendKeys(invalidEmail);
+        testResource.wait.until(ExpectedConditions.visibilityOf(testResource.loginPage.emailTextBox())).sendKeys(testResource.invalidEmail);
         testResource.wait.until(ExpectedConditions.visibilityOf(testResource.loginPage.passwordTextBox())).sendKeys(validPass);
         testResource.wait.until(ExpectedConditions.elementToBeClickable(testResource.loginPage.loginButton())).click();
         
@@ -56,15 +54,15 @@ public class LoginPageTest {
         Assert.assertTrue(waitErrorPass.isDisplayed(), "The home logo banner is not enabled.");
 
         //Invalid credentials
-        testResource.wait.until(ExpectedConditions.visibilityOf(testResource.loginPage.emailTextBox())).sendKeys(invalidEmail);
-        testResource.wait.until(ExpectedConditions.visibilityOf(testResource.loginPage.passwordTextBox())).sendKeys(invalidPass);
+        testResource.wait.until(ExpectedConditions.visibilityOf(testResource.loginPage.emailTextBox())).sendKeys(testResource.invalidEmail);
+        testResource.wait.until(ExpectedConditions.visibilityOf(testResource.loginPage.passwordTextBox())).sendKeys(testResource.randomPass);
         testResource.wait.until(ExpectedConditions.elementToBeClickable(testResource.loginPage.loginButton())).click();
         
         waitErrorPass = testResource.waitLonger.until(ExpectedConditions.visibilityOf(testResource.loginPage.errorPassMess()));
         Assert.assertTrue(waitErrorPass.isDisplayed(), "The home logo banner is not enabled.");
     }
 
-    @AfterClass
+    @AfterMethod
     public void tearDown(){
         testResource.driver.quit();
     
